@@ -26,20 +26,20 @@
 #     -109 <= nums[i] <= 109
 #     -109 <= target <= 109
 
-# nums = [2,7,11,15]
-nums = [2,2,4]
-target = 6
-# target = 9
+nums = [2,7,11,15]
+# nums = [3,2,4]
+# target = 6
+target = 9
 
 
 
-def two_sum(nums):
-      for i in range(len(nums)):
-        for j in range(len(nums)):
+def two_sum(nums, target):
+    for i in range(len(nums)):
+        for j in range(i + 1, len(nums)):
             if nums[i] + nums[j] == target:
                 print(f"i: {i}; j: {j}")
                 return [i, j]
 
        
-sum = two_sum(nums)
+sum = two_sum(nums, target)
 print(sum)
