@@ -48,8 +48,8 @@ def two_sum(nums, target):
             return [seen[complement], i]
         seen[num] = i
        
-sum = two_sum(nums, target)
-print(sum)
+# sum = two_sum(nums, target)
+# print(sum)
 
 """
 Given an array of integers prices where prices[i] is the price of a stock on day i,
@@ -62,3 +62,22 @@ Input:  prices = [7, 6, 4, 3, 1]
 Output: 0
 Explanation: prices only go down, no profit possible
 """
+prices = [7, 1, 5, 3, 6, 4]
+
+def stock_profit(prices):
+    min_price = prices[0]
+    max_profit = 0
+    for price in prices:
+        if price < min_price:
+            min_price = price
+
+        profit = price - min_price 
+    
+        if profit > max_profit:
+            max_profit = profit
+        
+    return max_profit
+
+# profit = stock_profit(prices)
+profit = stock_profit(prices)
+print(profit)
