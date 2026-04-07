@@ -1,45 +1,69 @@
-# Given an array of integers nums and an integer target, return indices of the two numbers such that they add up to target.
+"""
+Given an array of integers nums and an integer target, return indices of the two numbers such that they add up to target.
+You may assume that each input would have exactly one solution, and you may not use the same element twice.
+You can return the answer in any order.
 
-# You may assume that each input would have exactly one solution, and you may not use the same element twice.
+Example 1:
 
-# You can return the answer in any order.
+Input: nums = [2,7,11,15], target = 9
+Output: [0,1]
+Explanation: Because nums[0] + nums[1] == 9, we return [0, 1].
 
-# Example 1:
+Example 2:
 
-# Input: nums = [2,7,11,15], target = 9
-# Output: [0,1]
-# Explanation: Because nums[0] + nums[1] == 9, we return [0, 1].
+Input: nums = [3,2,4], target = 6
+Output: [1,2]
 
-# Example 2:
+Example 3:
 
-# Input: nums = [3,2,4], target = 6
-# Output: [1,2]
+Input: nums = [3,3], target = 6
+Output: [0,1]
 
-# Example 3:
+Constraints:
 
-# Input: nums = [3,3], target = 6
-# Output: [0,1]
+    2 <= nums.length <= 104
+     before IF-109 <= nums[i] <= 109
+    -109 <= target <= 109
 
-# Constraints:
-
-#     2 <= nums.length <= 104
-#     -109 <= nums[i] <= 109
-#     -109 <= target <= 109
-
-nums = [2,7,11,15]
-# nums = [3,2,4]
-# target = 6
-target = 9
+"""
+# nums = [2,7,11,15]
+# # nums = [3,2,4]
+# # target = 6
+# target = 9
 
 
+
+# def two_sum(nums, target):
+#     for i in range(len(nums)):
+#         for j in range(i + 1, len(nums)):
+#             if nums[i] + nums[j] == target:
+#                 print(f"i: {i}; j: {j}")
+#                 return [i, j]
+
+
+
+
+# def two_sum(nums, target):
+#     seen = {}
+#     for i, num in enumerate(nums):
+#         complement = ___________
+#         if ___________ in seen:
+#             return ___________
+#         seen[___] = ___
+
+# nums = [2,7,11,15]
+# target = 9
+
+nums = [3,2,4]
+target = 6
 
 def two_sum(nums, target):
-    for i in range(len(nums)):
-        for j in range(i + 1, len(nums)):
-            if nums[i] + nums[j] == target:
-                print(f"i: {i}; j: {j}")
-                return [i, j]
-
+    seen = {}
+    for i, num in enumerate(nums):
+        complement = target - num
+        if complement in seen:
+            return [seen[complement], i]
+        seen[num] = i
        
 sum = two_sum(nums, target)
 print(sum)
