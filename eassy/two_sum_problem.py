@@ -26,12 +26,6 @@ Constraints:
     -109 <= target <= 109
 
 """
-# nums = [2,7,11,15]
-# # nums = [3,2,4]
-# # target = 6
-# target = 9
-
-
 
 # def two_sum(nums, target):
 #     for i in range(len(nums)):
@@ -39,17 +33,6 @@ Constraints:
 #             if nums[i] + nums[j] == target:
 #                 print(f"i: {i}; j: {j}")
 #                 return [i, j]
-
-
-
-
-# def two_sum(nums, target):
-#     seen = {}
-#     for i, num in enumerate(nums):
-#         complement = ___________
-#         if ___________ in seen:
-#             return ___________
-#         seen[___] = ___
 
 # nums = [2,7,11,15]
 # target = 9
