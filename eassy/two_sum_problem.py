@@ -50,3 +50,15 @@ def two_sum(nums, target):
        
 sum = two_sum(nums, target)
 print(sum)
+
+"""
+Given an array of integers prices where prices[i] is the price of a stock on day i,
+return the maximum profit you can achieve by buying on one day and selling on a later day.
+You can only buy once and sell once. If no profit is possible return 0.
+Input:  prices = [7, 1, 5, 3, 6, 4]
+Output: 5
+Explanation: Buy on day 2 (price=1), sell on day 5 (price=6), profit = 6-1 = 5
+Input:  prices = [7, 6, 4, 3, 1]
+Output: 0
+Explanation: prices only go down, no profit possible
+"""
