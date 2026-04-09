@@ -1,4 +1,6 @@
 """
+###################################################### PROBLEM 1 ######################################################################
+
 Given an array of integers nums and an integer target, return indices of the two numbers such that they add up to target.
 You may assume that each input would have exactly one solution, and you may not use the same element twice.
 You can return the answer in any order.
@@ -52,6 +54,9 @@ def two_sum(nums, target):
 # print(sum)
 
 """
+
+###################################################### PROBLEM 2 ######################################################################
+
 Given an array of integers prices where prices[i] is the price of a stock on day i,
 return the maximum profit you can achieve by buying on one day and selling on a later day.
 You can only buy once and sell once. If no profit is possible return 0.
@@ -78,6 +83,60 @@ def stock_profit(prices):
         
     return max_profit
 
+# # profit = stock_profit(prices)
 # profit = stock_profit(prices)
-profit = stock_profit(prices)
-print(profit)
+# print(profit)
+
+
+"""
+###################################################### PROBLEM 3 ######################################################################
+
+Contains Duplicate
+
+Given an integer array nums, return True if any value appears at least twice, and False if every element is distinct.
+Input:  nums = [1, 2, 3, 1]
+Output: True
+Input:  nums = [1, 2, 3, 4]
+Output: False
+Input:  nums = [1, 1, 1, 3, 3, 4, 3, 2, 4, 2]
+Output: True
+
+Before coding, answer these questions:
+1. What am I given and what must I return?
+    GIVEN AN IRRAY OF INTS AND HAVE TO RETURN TRUE IF DUPLICATE OR FALSE IF NOT DUPLICATES.
+2. What do I need to check at each step?
+    IF I HAVE SEEN THAT NUM BEFORE
+3. Do I need a list, dict, or set?
+
+"""
+
+""" MY WAY """
+
+nums = [1, 2, 3, 1]
+# nums = [1, 2, 3, 4]
+
+# def contains_duplicate(nums):
+#     seen = set()
+#     for num in nums:
+#         if num in seen:
+#             return True
+#         else: 
+#             seen.add(num)
+#     return False
+
+# print(contains_duplicate(nums))
+
+
+""" CLAUDE CODE's WAY 
+
+the else statement is not needed since this is what is called an early return
+
+"""
+
+def contains_duplicate(nums):
+    seen = set()
+    for num in nums:
+        if num in seen:
+            return True
+        seen.add(num)
+    return False
