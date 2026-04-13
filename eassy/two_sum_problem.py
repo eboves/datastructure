@@ -140,3 +140,32 @@ def contains_duplicate(nums):
             return True
         seen.add(num)
     return False
+
+
+"""
+###################################################### PROBLEM 4 ######################################################################
+
+Valid Anagram
+
+Given two strings s and t, return True if t is an anagram of s, and False otherwise.
+An anagram is a word formed by rearranging the letters of another word using all original letters exactly once.
+Input:  s = "anagram", t = "nagaram"
+Output: True
+Input:  s = "rat", t = "car"
+Output: False
+Input:  s = "cat", t = "act"
+Output: True
+
+Before coding, answer these questions:
+1. What am I given and what must I return?
+    GIVEN 2 STRING, TRUE IF ANAGRAM OR FALSE IF NOT ANAGRAM.
+2. What makes two strings an anagram?
+    THAT WITH ONE WORD I CAN RECREATE A DIFFERENT WORD USING THE LETTER OF THE FIRST ONE.
+3. What do I need to track for each string?
+    EACH LETTER
+4. List, dict, or set?
+    DICT
+
+
+
+"""
