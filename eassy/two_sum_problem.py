@@ -168,4 +168,38 @@ Before coding, answer these questions:
 
 
 
+
 """
+# s = "anagram"
+# t = "nagaram"
+
+s = "rat" 
+t = "car"
+
+def valid_anagram(s, t):
+    if len(s) != len(t):           # quick check — if lengths differ
+        return False         # can't be an anagram
+
+    count = {}
+
+    for char in s:
+        count[char] = count.get(char, 0) + 1     # add 1 to the count each time you see it
+      
+    for char in t:
+        count[char] = count.get(char,0) - 1  # subtract 1 each time you see it in t
+   
+    for val in count.values():
+        if val != 0:       # if any count isn't 0
+            return False     # letters don't match
+
+    return True
+
+# result = valid_anagram(s, t)
+# print(result)
+
+
+
+
+
+
+
