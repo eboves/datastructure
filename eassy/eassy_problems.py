@@ -199,7 +199,45 @@ def valid_anagram(s, t):
 
 
 
+"""
+###################################################### PROBLEM 5 ######################################################################
+============================================
+LeetCode #125 - Valid Palindrome
+Difficulty: Easy
+Pattern: Two Pointers
+============================================
+
+A phrase is a palindrome if, after converting all uppercase letters
+into lowercase letters and removing all non-alphanumeric characters,
+it reads the same forward and backward.
+
+Given a string s, return True if it is a palindrome, False otherwise.
+
+Example 1:
+Input:  s = "A man, a plan, a canal: Panama"
+Output: True
+Explanation: "amanaplanacanalpanama" is a palindrome
+
+Example 2:
+Input:  s = "race a car"
+Output: False
+Explanation: "raceacar" is not a palindrome
+
+Example 3:
+Input:  s = " "
+Output: True
+Explanation: empty string after cleaning is a palindrome
 
 
+"""
 
+
+s = "A man, a plan, a canal: Panama"
+
+def is_palindrome(s):
+    new_s = s.isalnum()
+    print(new_s)
+    pass
+
+print(is_palindrome(s))
 
