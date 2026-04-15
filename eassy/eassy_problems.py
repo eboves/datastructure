@@ -235,9 +235,18 @@ Explanation: empty string after cleaning is a palindrome
 s = "A man, a plan, a canal: Panama"
 
 def is_palindrome(s):
-    new_s = s.isalnum()
-    print(new_s)
-    pass
+    new_s = "".join([char for char in s if char.isalnum()]).lower()
+    left = 0
+    right = len(new_s) - 1
+
+    while left < right:
+        if new_s[left] != new_s[right]:
+            return False
+        left += 1
+        right -= 1
+
+    return True     
+    
 
 print(is_palindrome(s))
 
