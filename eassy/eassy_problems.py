@@ -293,8 +293,8 @@ def mayority_num(nums):
             best_num = key
     return best_num
     
-may_num = mayority_num(nums)
-print(may_num)
+# may_num = mayority_num(nums)
+# print(may_num)
 
 
 
@@ -310,3 +310,34 @@ print(may_num)
 # Why: comparing from both ends, just existence check
 
 # """
+
+# ============================================
+# LeetCode #283 - Move Zeroes
+# Difficulty: Easy
+# Pattern: Two Pointers
+# ============================================
+#
+# Given an integer array nums, move all 0's to the end
+# while maintaining the relative order of the non-zero elements.
+# You must do this IN PLACE (modify the original array, no new array)
+#
+# Example 1:
+# Input:  nums = [0, 1, 0, 3, 12]
+# Output: [1, 3, 12, 0, 0]
+#
+# Example 2:
+# Input:  nums = [0]
+# Output: [0]
+#
+# Example 3:
+# Input:  nums = [1, 0, 1]
+# Output: [1, 1, 0]
+#
+# ============================================
+
+nums = [0, 1, 0, 3, 12]
+
+def move_zeroes(nums):
+    pass
+
+print(move_zeroes(nums))
