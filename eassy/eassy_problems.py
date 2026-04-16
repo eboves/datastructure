@@ -287,11 +287,26 @@ def mayority_num(nums):
     seen = {}
     for i in range(len(nums)):
         seen[nums[i]] = seen.get(nums[i], 0) + 1 
-    for key, count in seen.items():
-        if count > best_value:
-            best_value = count
+    for key, value in seen.items():
+        if value > best_value:
+            best_value = value
             best_num = key
     return best_num
     
 may_num = mayority_num(nums)
 print(may_num)
+
+
+
+"""
+# Input:
+# Output:
+# Pattern:
+# Why:
+
+# Input:  one string
+# Output: True or False
+# Pattern: Two Pointers
+# Why: comparing from both ends, just existence check
+
+# """
