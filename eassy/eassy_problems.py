@@ -278,12 +278,20 @@ Follow-up: Could you solve the problem in linear time and in O(1) space?
 
 """
 
-nums = [3,2,3]
-# nums = [2,2,1,1,1,2,2]
+# nums = [3,2,3]
+nums = [2,2,1,1,1,2,2]
 
 def mayority_num(nums):
+    best_num = None
+    best_value = 0
     seen = {}
     for i in range(len(nums)):
-        print(nums[i])
-
-mayority_num(nums)
+        seen[nums[i]] = seen.get(nums[i], 0) + 1 
+    for key, count in seen.items():
+        if count > best_value:
+            best_value = count
+            best_num = key
+    return best_num
+    
+may_num = mayority_num(nums)
+print(may_num)
