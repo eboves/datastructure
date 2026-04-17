@@ -366,12 +366,14 @@ def move_zeroes(nums):
     
     # fill the rest with zeros
     while slow < len(nums):
-        nums[slow] = 
+        nums[slow] = 0 #fix this (is wrong added because back to work)
         slow += 1
     
     return nums
 
 
+new_n = move_zeroes(nums)
+print(new_n)
 
 
 
