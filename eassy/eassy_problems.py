@@ -310,7 +310,7 @@ def mayority_num(nums):
 # Why: comparing from both ends, just existence check
 
 # """
-
+"""
 # ============================================
 # LeetCode #283 - Move Zeroes
 # Difficulty: Easy
@@ -335,9 +335,45 @@ def mayority_num(nums):
 #
 # ============================================
 
+# Input: a list of numbers
+# Output: a "sorted" list where 0 are at the end of the list (in place)
+# Pattern: 
+# Why:
+
+"""
+
 nums = [0, 1, 0, 3, 12]
+# nums = [1, 0, 1]
+# nums = [0]
+
+# def move_zeroes(nums):
+
+#     for n in nums:
+#         if n == 0:
+#             nums.remove(0)
+#             nums.append(0)
+#     return nums
+
+# new_n = move_zeroes(nums)
+# print(new_n)
 
 def move_zeroes(nums):
-    pass
+    slow = 0
+    for fast in range(len(nums)):
+        if nums[fast] != 0:
+            nums[slow] = nums[fast]  # place non-zero at slow position
+            slow += 1
+    
+    # fill the rest with zeros
+    while slow < len(nums):
+        nums[slow] = 
+        slow += 1
+    
+    return nums
 
-print(move_zeroes(nums))
+
+
+
+
+
+
