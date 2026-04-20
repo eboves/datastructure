@@ -372,11 +372,48 @@ def move_zeroes(nums):
     
     return nums
 
+"""
+# new_n = move_zeroes(nums)
+# print(new_n)
 
-new_n = move_zeroes(nums)
-print(new_n)
+# ============================================
+# LeetCode #26 - Remove Duplicates from Sorted Array
+# Difficulty: Easy
+# Pattern: Two Pointers (Same Direction)
+# ============================================
+#
+# Given an integer array nums sorted in non-decreasing order,
+# remove the duplicates IN PLACE so each unique element appears only once.
+# Return k — the number of unique elements.
+#
+# The first k elements of nums should hold the unique values.
+# What remains after k doesn't matter.
+#
+# Example 1:
+# Input:  nums = [1, 1, 2]
+# Output: k = 2, nums = [1, 2, _]
+#
+# Example 2:
+# Input:  nums = [0, 0, 1, 1, 1, 2, 2, 3, 3, 4]
+# Output: k = 5, nums = [0, 1, 2, 3, 4, _, _, _, _, _]
+#
+# ============================================
+
+Input:
+Output:
+Pattern:
+Why:
 
 
+
+"""
+nums = [1, 1, 2]
+# nums = [0, 0, 1, 1, 1, 2, 2, 3, 3, 4]
+
+def remove_duplicates(nums):
+    pass
+
+print(remove_duplicates(nums))
 
 
 
