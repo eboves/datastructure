@@ -366,6 +366,7 @@ def move_zeroes(nums):
     
     # fill the rest with zeros
     while slow < len(nums):
+
         nums[slow] = 0 #fix this (is wrong added because back to work)
         slow += 1
     
