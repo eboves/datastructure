@@ -372,9 +372,11 @@ def move_zeroes(nums):
     
     return nums
 
-"""
 # new_n = move_zeroes(nums)
 # print(new_n)
+
+"""
+
 
 # ============================================
 # LeetCode #26 - Remove Duplicates from Sorted Array
@@ -399,21 +401,73 @@ def move_zeroes(nums):
 #
 # ============================================
 
-Input:
-Output:
-Pattern:
+Input: A LIST OF NUMS
+Output: A VARIABLE HOLDING THE AMOUNT OF UNIQUE VALUES IN THE LIST
+Pattern: 
 Why:
 
 
 
 """
-nums = [1, 1, 2]
-# nums = [0, 0, 1, 1, 1, 2, 2, 3, 3, 4]
+# nums = [1, 1, 2]
+nums = [0, 0, 1, 1, 1, 2, 2, 3, 3, 4]
 
 def remove_duplicates(nums):
-    pass
+    slow = 0
+    for fast in range(len(nums)):
+        if nums[slow] != nums[fast]:
+            slow += 1
+            nums[slow] = nums[fast]
+    return slow + 1, nums            
+            
+# k, n = remove_duplicates(nums)
+# print(k, n)
 
-print(remove_duplicates(nums))
+"""
+# ============================================
+# LeetCode #350 - Intersection of Two Arrays II
+# Difficulty: Easy
+# Pattern: Hash Map
+# ============================================
+#
+# Given two integer arrays nums1 and nums2, return an array
+# of their intersection. Each element in the result must
+# appear as many times as it shows in both arrays.
+#
+# Example 1:
+# Input:  nums1 = [1,2,2,1], nums2 = [2,2]
+# Output: [2,2]
+#
+# Example 2:
+# Input:  nums1 = [4,9,5], nums2 = [9,4,9,8,4]
+# Output: [4,9]
+#
+# ============================================
+
+input: 2 list
+output: a list of common number in both lists
+Pattern: 
+Why:
 
 
 
+
+
+"""
+nums1 = [1, 2, 2, 1]
+nums2 = [2, 2]
+
+def intersect(nums1, nums2):
+    count = {}
+    result = []
+    for n in nums2:
+        count[n] = count.get(n, 0) + 1
+        print(count)
+    for nu in range(len(nums1)):
+        if nums1[nu] in count and count[nums1[nu]] > 0:
+            result.append(nums1[nu])
+            count[nums1[nu]] -= 1
+
+    return result
+
+print(intersect(nums1, nums2))
