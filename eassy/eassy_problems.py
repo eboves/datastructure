@@ -462,7 +462,7 @@ def intersect(nums1, nums2):
     result = []
     for n in nums2:
         count[n] = count.get(n, 0) + 1
-        print(count)
+        # print(count)
     for nu in range(len(nums1)):
         if nums1[nu] in count and count[nums1[nu]] > 0:
             result.append(nums1[nu])
@@ -470,4 +470,55 @@ def intersect(nums1, nums2):
 
     return result
 
-print(intersect(nums1, nums2))
+# print(intersect(nums1, nums2))
+
+
+"""
+
+# ============================================
+# LeetCode #66 - Plus One
+# Difficulty: Easy
+# Pattern: Array Basics
+# ============================================
+#
+# You are given a large integer represented as an integer array digits,
+# where each digits[i] is the i-th digit of the integer.
+# The digits are ordered from most significant to least significant
+# (left to right). Add one to the integer and return the result as an array.
+#
+# Example 1:
+# Input:  digits = [1, 2, 3]
+# Output: [1, 2, 4]
+# Explanation: 123 + 1 = 124
+#
+# Example 2:
+# Input:  digits = [1, 2, 9]
+# Output: [1, 3, 0]
+# Explanation: 129 + 1 = 130
+#
+# Example 3:
+# Input:  digits = [9, 9, 9]
+# Output: [1, 0, 0, 0]
+# Explanation: 999 + 1 = 1000
+#
+# ============================================
+
+
+1. What is the input shape?
+2. What is the output shape?
+3. What operation am I doing?
+
+
+
+"""
+digits = [1, 2, 3]
+# digits = [1, 2, 9]
+# digits = [9, 9, 9]
+
+def plus_one(digits):
+    pass
+
+print(plus_one(digits))
+
+
+
