@@ -511,14 +511,36 @@ def intersect(nums1, nums2):
 
 
 """
-digits = [1, 2, 3]
+# digits = [1, 2, 3]
 # digits = [1, 2, 9]
-# digits = [9, 9, 9]
+digits = [9, 9, 9]
+
+# def plus_one(digits):
+#     for i in range(len(digits)-1,-1,-1):
+
+#         if digits[i] != 9:
+#             digits[i] += 1
+#             return digits
+            
+#         elif digits[i] == 9:
+#             digits[i] = 0
+#             digits[i-1] +=1
+#             return digits
+
+#     print(digits)
+
+# plus_uno = plus_one(digits)
+# print(plus_uno)
 
 def plus_one(digits):
-    pass
+    for i in range(len(digits) - 1, -1, -1):
+        if digits[i] != 9:
+            digits[i] += 1
+            return digits
+        digits[i] = 0         # it's a 9, change to 0, keep looping
+    
+    digits.insert(0, 1)               # ← what goes here?
+    return digits
 
-print(plus_one(digits))
-
-
-
+plus_uno = plus_one(digits)
+print(plus_uno)
