@@ -1,4 +1,59 @@
 """
+
+THIS IS THE RE-DO OF THE PROBLEMS; STARTING WITH THE ONE I HAD THE MOST ISSUES.
+
+"""
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#####################################################################################################################################################################
+
+"""
+
+THESE ARE THE ORIGINAL PROBLEMS
+
+"""
+
+
+"""
 ###################################################### PROBLEM 1 ######################################################################
 
 Given an array of integers nums and an integer target, return indices of the two numbers such that they add up to target.
@@ -542,5 +597,9 @@ def plus_one(digits):
     digits.insert(0, 1)               # ← what goes here?
     return digits
 
-plus_uno = plus_one(digits)
-print(plus_uno)
+# plus_uno = plus_one(digits)
+# print(plus_uno)
+
+
+
+
