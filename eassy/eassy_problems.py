@@ -6,22 +6,352 @@ THIS IS THE RE-DO OF THE PROBLEMS; STARTING WITH THE ONE I HAD THE MOST ISSUES.
 
 
 
+# 1. Intersection of Two Arrays II #350 — Hash Map
+# python# ============================================
+# LeetCode #350 - Intersection of Two Arrays II
+# Difficulty: Easy
+# Pattern: Hash Map
+# ============================================
+#
+# Given two integer arrays nums1 and nums2, return an array
+# of their intersection. Each element in the result must
+# appear as many times as it shows in both arrays.
+#
+# Example 1:
+# Input:  nums1 = [1,2,2,1], nums2 = [2,2]
+# Output: [2,2]
+#
+# Example 2:
+# Input:  nums1 = [4,9,5], nums2 = [9,4,9,8,4]
+# Output: [4,9]
+# ============================================
+
+nums1 = [1, 2, 2, 1]
+nums2 = [2, 2]
+# nums1 = [4, 9, 5]
+# nums2 = [9, 4, 9, 8, 4]
+
+def intersect(nums1, nums2):
+    # 1. build count dict from nums2
+    # 2. loop through nums1
+    #    if num in count and count > 0
+    #       add to result, subtract 1
+    # 3. return result
+    pass
+
+print(intersect(nums1, nums2))
+
+# 2. Plus One #66 — Array Basics
+# python# ============================================
+# LeetCode #66 - Plus One
+# Difficulty: Easy
+# Pattern: Array Basics
+# ============================================
+#
+# Given a large integer represented as an array of digits,
+# add one to the integer and return the result as an array.
+#
+# Example 1:
+# Input:  digits = [1,2,3]
+# Output: [1,2,4]
+#
+# Example 2:
+# Input:  digits = [1,2,9]
+# Output: [1,3,0]
+#
+# Example 3:
+# Input:  digits = [9,9,9]
+# Output: [1,0,0,0]
+# ============================================
+
+digits = [1, 2, 3]
+# digits = [1, 2, 9]
+# digits = [9, 9, 9]
+
+def plus_one(digits):
+    # 1. loop backwards through digits
+    # 2. if digit != 9 → add 1, return
+    # 3. if digit == 9 → change to 0, keep looping
+    # 4. if loop ends → insert 1 at front
+    pass
+
+print(plus_one(digits))
+
+# 3. Remove Duplicates from Sorted Array #26 — Two Pointers
+# python# ============================================
+# LeetCode #26 - Remove Duplicates from Sorted Array
+# Difficulty: Easy
+# Pattern: Two Pointers (Same Direction)
+# ============================================
+#
+# Given a sorted array, remove duplicates in place.
+# Return k — the number of unique elements.
+#
+# Example 1:
+# Input:  nums = [1,1,2]
+# Output: k=2, nums=[1,2,_]
+#
+# Example 2:
+# Input:  nums = [0,0,1,1,1,2,2,3,3,4]
+# Output: k=5, nums=[0,1,2,3,4,_,_,_,_,_]
+# ============================================
+
+nums = [1, 1, 2]
+# nums = [0, 0, 1, 1, 1, 2, 2, 3, 3, 4]
+
+def remove_duplicates(nums):
+    # 1. slow = 0
+    # 2. loop fast through array
+    #    if nums[fast] != nums[slow]
+    #       slow += 1, copy fast to slow
+    # 3. return slow + 1
+    pass
+
+print(remove_duplicates(nums))
+
+# 4. Move Zeroes #283 — Two Pointers
+# python# ============================================
+# LeetCode #283 - Move Zeroes
+# Difficulty: Easy
+# Pattern: Two Pointers (Same Direction)
+# ============================================
+#
+# Given an array, move all 0s to the end while
+# maintaining the order of non-zero elements.
+# Do it in place.
+#
+# Example 1:
+# Input:  nums = [0,1,0,3,12]
+# Output: [1,3,12,0,0]
+#
+# Example 2:
+# Input:  nums = [0]
+# Output: [0]
+# ============================================
+
+nums = [0, 1, 0, 3, 12]
+# nums = [0]
+
+def move_zeroes(nums):
+    # 1. slow = 0
+    # 2. loop fast through array
+    #    if nums[fast] != 0
+    #       copy to slow, slow += 1
+    # 3. fill rest with zeros
+    # 4. return nums
+    pass
+
+print(move_zeroes(nums))
+
+# 5. Valid Palindrome #125 — Two Pointers
+# python# ============================================
+# LeetCode #125 - Valid Palindrome
+# Difficulty: Easy
+# Pattern: Two Pointers (Opposite Ends)
+# ============================================
+#
+# A phrase is a palindrome if after removing non-alphanumeric
+# characters and lowercasing, it reads the same forwards and backwards.
+#
+# Example 1:
+# Input:  s = "A man, a plan, a canal: Panama"
+# Output: True
+#
+# Example 2:
+# Input:  s = "race a car"
+# Output: False
+# ============================================
+
+s = "A man, a plan, a canal: Panama"
+# s = "race a car"
+
+def is_palindrome(s):
+    # 1. clean the string (isalnum + lower)
+    # 2. left = 0, right = len - 1
+    # 3. while left < right
+    #    if chars dont match → return False
+    #    move both inward
+    # 4. return True
+    pass
+
+print(is_palindrome(s))
+
+# 6. Majority Element #169 — Hash Map
+# python# ============================================
+# # LeetCode #169 - Majority Element
+# Difficulty: Easy
+# Pattern: Hash Map
+# ============================================
+#
+# Given an array, return the element that appears
+# more than n/2 times. It always exists.
+#
+# Example 1:
+# Input:  nums = [3,2,3]
+# Output: 3
+#
+# Example 2:
+# Input:  nums = [2,2,1,1,1,2,2]
+# Output: 2
+# ============================================
+
+nums = [3, 2, 3]
+# nums = [2, 2, 1, 1, 1, 2, 2]
+
+def majority_element(nums):
+    # 1. build count dict
+    # 2. loop through dict
+    #    track best_num and best_count
+    # 3. return best_num
+    pass
+
+print(majority_element(nums))
+
+# 7. Valid Anagram #242 — Hash Map
+# python# ============================================
+# LeetCode #242 - Valid Anagram
+# Difficulty: Easy
+# Pattern: Hash Map
+# ============================================
+#
+# Given two strings, return True if t is an anagram of s.
+#
+# Example 1:
+# Input:  s = "anagram", t = "nagaram"
+# Output: True
+#
+# Example 2:
+# Input:  s = "rat", t = "car"
+# Output: False
+# ============================================
+
+s = "anagram"
+t = "nagaram"
+# s = "rat"
+# t = "car"
+
+def valid_anagram(s, t):
+    # 1. if lengths differ → return False
+    # 2. build count dict from s
+    # 3. loop through t, subtract from count
+    # 4. if any count != 0 → return False
+    # 5. return True
+    pass
+
+print(valid_anagram(s, t))
+
+# 8. Best Time to Buy and Sell Stock #121 — Greedy
+# python# ============================================
+# LeetCode #121 - Best Time to Buy and Sell Stock
+# Difficulty: Easy
+# Pattern: Greedy
+# ============================================
+#
+# Given an array of prices, return the maximum profit
+# from buying on one day and selling on a later day.
+# Return 0 if no profit is possible.
+#
+# Example 1:
+# Input:  prices = [7,1,5,3,6,4]
+# Output: 5
+#
+# Example 2:
+# Input:  prices = [7,6,4,3,1]
+# Output: 0
+# ============================================
+
+prices = [7, 1, 5, 3, 6, 4]
+# prices = [7, 6, 4, 3, 1]
+
+def max_profit(prices):
+    # 1. min_price = first price
+    # 2. max_profit = 0
+    # 3. loop through prices
+    #    update min_price if lower
+    #    update max_profit if better
+    # 4. return max_profit
+    pass
+
+print(max_profit(prices))
+
+# 9. Contains Duplicate #217 — Set
+# python# ============================================
+# LeetCode #217 - Contains Duplicate
+# Difficulty: Easy
+# Pattern: Set
+# ============================================
+#
+# Given an array, return True if any value appears
+# at least twice, False if all elements are distinct.
+#
+# Example 1:
+# Input:  nums = [1,2,3,1]
+# Output: True
+#
+# Example 2:
+# Input:  nums = [1,2,3,4]
+# Output: False
+# ============================================
+
+nums = [1, 2, 3, 1]
+# nums = [1, 2, 3, 4]
+
+def contains_duplicate(nums):
+    # 1. seen = set()
+    # 2. loop through nums
+    #    if num in seen → return True
+    #    add to seen
+    # 3. return False
+    pass
+
+print(contains_duplicate(nums))
+
+# 10. Two Sum #1 — Hash Map
+# python# ============================================
+# LeetCode #1 - Two Sum
+# Difficulty: Easy
+# Pattern: Hash Map
+# ============================================
+#
+# Given an array and a target, return indices of
+# the two numbers that add up to target.
+#
+# Example 1:
+# Input:  nums = [2,7,11,15], target = 9
+# Output: [0,1]
+#
+# Example 2:
+# Input:  nums = [3,2,4], target = 6
+# Output: [1,2]
+# ============================================
+
+nums = [2, 7, 11, 15]
+target = 9
+
+def two_sum(nums, target):
+    # 1. seen = {}
+    # 2. loop with enumerate
+    #    complement = target - num
+    #    if complement in seen → return indices
+    #    store num: index in seen
+    pass
+
+print(two_sum(nums, target))
 
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
+# INPUT:     
+# OUTPUT:    
+# OPERATION: ___(primary) → ___ → ___
+# PATTERN:   
+# DS:        
+# PLAN:
+#   1. 
+#   2. 
+#   3. 
+#   4. 
+#   5.
 
 
 
