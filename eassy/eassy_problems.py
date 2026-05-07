@@ -26,20 +26,68 @@ THIS IS THE RE-DO OF THE PROBLEMS; STARTING WITH THE ONE I HAD THE MOST ISSUES.
 # Output: [4,9]
 # ============================================
 
+
+# INPUT: two list of integers nums1 and nums2 (unsorted arrays)  
+# OUTPUT: a list of both array intersection
+# OPERATION: count(primary) → compare → collect
+# PATTERN: dict (frecuecy > 0)
+# DS: dict
+# PLAN:
+#   1. create new_dict and create result_list
+#   2. loop through nums1 
+#       add numbers as keys and frecuency as values
+#   3. loop through nums2
+#       check if nums2 in new_dict, if yes subtract from dict and append to result_list
+#   4. 
+#   5.
+
 nums1 = [1, 2, 2, 1]
 nums2 = [2, 2]
 # nums1 = [4, 9, 5]
 # nums2 = [9, 4, 9, 8, 4]
 
 def intersect(nums1, nums2):
-    # 1. build count dict from nums2
-    # 2. loop through nums1
-    #    if num in count and count > 0
-    #       add to result, subtract 1
-    # 3. return result
+ 
     pass
 
 print(intersect(nums1, nums2))
+
+############################################################## PROBLEM 1 END ###############################################################
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 # 2. Plus One #66 — Array Basics
 # python# ============================================
