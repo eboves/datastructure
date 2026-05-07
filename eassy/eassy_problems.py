@@ -1,3 +1,16 @@
+
+# INPUT:     
+# OUTPUT:    
+# OPERATION: ___(primary) → ___ → ___
+# PATTERN:   
+# DS:        
+# PLAN:
+#   1. 
+#   2. 
+#   3. 
+#   4. 
+#   5.
+
 """
 
 THIS IS THE RE-DO OF THE PROBLEMS; STARTING WITH THE ONE I HAD THE MOST ISSUES.
@@ -55,39 +68,7 @@ print(intersect(nums1, nums2))
 ############################################################## PROBLEM 1 END ###############################################################
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+############################################################## PROBLEM 2 START ###############################################################
 
 # 2. Plus One #66 — Array Basics
 # python# ============================================
@@ -112,6 +93,23 @@ print(intersect(nums1, nums2))
 # Output: [1,0,0,0]
 # ============================================
 
+
+# INPUT: a large interger broken down in an array
+# OUTPUT: same array of large integer modified
+# OPERATION: find(primary) → look up → collect
+# PATTERN: list (look for last number to add 1) return modified list   
+# DS: list       
+# PLAN:
+#   1. loop through digits
+#   2. if last digits not equals 9
+            #add 1 to last digit and return list
+#   3. if last digit is iqual to 9
+#           change last digit to 0 and add 1 to next number
+#      if end of loop and not more digits insert 1 in position 0
+
+
+
+
 digits = [1, 2, 3]
 # digits = [1, 2, 9]
 # digits = [9, 9, 9]
@@ -124,6 +122,40 @@ def plus_one(digits):
     pass
 
 print(plus_one(digits))
+
+
+############################################################## PROBLEM 2 END ###############################################################
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 # 3. Remove Duplicates from Sorted Array #26 — Two Pointers
 # python# ============================================
