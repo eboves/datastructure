@@ -38,8 +38,7 @@ THIS IS THE RE-DO OF THE PROBLEMS; STARTING WITH THE ONE I HAD THE MOST ISSUES.
 #       add numbers as keys and frecuency as values
 #   3. loop through nums2
 #       check if nums2 in new_dict, if yes subtract from dict and append to result_list
-#   4. 
-#   5.
+#   4. return result_list with intersections
 
 nums1 = [1, 2, 2, 1]
 nums2 = [2, 2]
@@ -47,7 +46,8 @@ nums2 = [2, 2]
 # nums2 = [9, 4, 9, 8, 4]
 
 def intersect(nums1, nums2):
- 
+    result = []
+    new_dict = {}
     pass
 
 print(intersect(nums1, nums2))
