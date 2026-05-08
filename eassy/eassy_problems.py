@@ -152,6 +152,9 @@ def remove_duplicates(nums):
 
 # print(remove_duplicates(nums))
 
+#################################################################### END OF 3 ######
+
+
 # 4. Move Zeroes #283 — Two Pointers
 # python# ============================================
 # LeetCode #283 - Move Zeroes
@@ -172,6 +175,23 @@ def remove_duplicates(nums):
 # Output: [0]
 # ============================================
 
+
+# INPUT: a list of numbers nums   
+# OUTPUT: same list of numbers (modified in place)
+# OPERATION: compare (primary) → rearrange → collect
+# PATTERN: two pointers  
+# DS: two variables, slow and fast
+# PLAN:
+#   1. create slow = 0, fast = 1
+#   2. loop through nums
+#   3. 
+#   4. 
+#   5.
+
+
+
+
+
 nums = [0, 1, 0, 3, 12]
 # nums = [0]
 
@@ -180,6 +200,25 @@ def move_zeroes(nums):
     pass
 
 # print(move_zeroes(nums))
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 # 5. Valid Palindrome #125 — Two Pointers
 # python# ============================================
