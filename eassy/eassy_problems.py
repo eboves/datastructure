@@ -48,7 +48,11 @@ nums2 = [2, 2]
 def intersect(nums1, nums2):
     result = []
     new_dict = {}
-    pass
+    
+    for num in nums1:
+        new_dict[num] = new_dict.get(num, 0) + 1
+
+        
 
 print(intersect(nums1, nums2))
 
@@ -117,14 +121,11 @@ digits = [1, 2, 3]
 # digits = [9, 9, 9]
 
 def plus_one(digits):
-    # 1. loop backwards through digits
-    # 2. if digit != 9 → add 1, return
-    # 3. if digit == 9 → change to 0, keep looping
-    # 4. if loop ends → insert 1 at front
+
     pass
 
-print(plus_one(digits))
-
+# print(plus_one(digits))
+# 
 # 3. Remove Duplicates from Sorted Array #26 — Two Pointers
 # python# ============================================
 # LeetCode #26 - Remove Duplicates from Sorted Array
@@ -148,14 +149,10 @@ nums = [1, 1, 2]
 # nums = [0, 0, 1, 1, 1, 2, 2, 3, 3, 4]
 
 def remove_duplicates(nums):
-    # 1. slow = 0
-    # 2. loop fast through array
-    #    if nums[fast] != nums[slow]
-    #       slow += 1, copy fast to slow
-    # 3. return slow + 1
+    
     pass
 
-print(remove_duplicates(nums))
+# print(remove_duplicates(nums))
 
 # 4. Move Zeroes #283 — Two Pointers
 # python# ============================================
@@ -181,15 +178,10 @@ nums = [0, 1, 0, 3, 12]
 # nums = [0]
 
 def move_zeroes(nums):
-    # 1. slow = 0
-    # 2. loop fast through array
-    #    if nums[fast] != 0
-    #       copy to slow, slow += 1
-    # 3. fill rest with zeros
-    # 4. return nums
+ 
     pass
 
-print(move_zeroes(nums))
+# print(move_zeroes(nums))
 
 # 5. Valid Palindrome #125 — Two Pointers
 # python# ============================================
@@ -214,15 +206,10 @@ s = "A man, a plan, a canal: Panama"
 # s = "race a car"
 
 def is_palindrome(s):
-    # 1. clean the string (isalnum + lower)
-    # 2. left = 0, right = len - 1
-    # 3. while left < right
-    #    if chars dont match → return False
-    #    move both inward
-    # 4. return True
+
     pass
 
-print(is_palindrome(s))
+# print(is_palindrome(s))
 
 # 6. Majority Element #169 — Hash Map
 # python# ============================================
@@ -247,13 +234,10 @@ nums = [3, 2, 3]
 # nums = [2, 2, 1, 1, 1, 2, 2]
 
 def majority_element(nums):
-    # 1. build count dict
-    # 2. loop through dict
-    #    track best_num and best_count
-    # 3. return best_num
+  
     pass
 
-print(majority_element(nums))
+# print(majority_element(nums))
 
 # 7. Valid Anagram #242 — Hash Map
 # python# ============================================
@@ -279,14 +263,10 @@ t = "nagaram"
 # t = "car"
 
 def valid_anagram(s, t):
-    # 1. if lengths differ → return False
-    # 2. build count dict from s
-    # 3. loop through t, subtract from count
-    # 4. if any count != 0 → return False
-    # 5. return True
+  
     pass
 
-print(valid_anagram(s, t))
+# print(valid_anagram(s, t))
 
 # 8. Best Time to Buy and Sell Stock #121 — Greedy
 # python# ============================================
@@ -312,15 +292,10 @@ prices = [7, 1, 5, 3, 6, 4]
 # prices = [7, 6, 4, 3, 1]
 
 def max_profit(prices):
-    # 1. min_price = first price
-    # 2. max_profit = 0
-    # 3. loop through prices
-    #    update min_price if lower
-    #    update max_profit if better
-    # 4. return max_profit
+  
     pass
 
-print(max_profit(prices))
+# print(max_profit(prices))
 
 # 9. Contains Duplicate #217 — Set
 # python# ============================================
@@ -345,14 +320,10 @@ nums = [1, 2, 3, 1]
 # nums = [1, 2, 3, 4]
 
 def contains_duplicate(nums):
-    # 1. seen = set()
-    # 2. loop through nums
-    #    if num in seen → return True
-    #    add to seen
-    # 3. return False
+
     pass
 
-print(contains_duplicate(nums))
+# print(contains_duplicate(nums))
 
 # 10. Two Sum #1 — Hash Map
 # python# ============================================
@@ -377,14 +348,10 @@ nums = [2, 7, 11, 15]
 target = 9
 
 def two_sum(nums, target):
-    # 1. seen = {}
-    # 2. loop with enumerate
-    #    complement = target - num
-    #    if complement in seen → return indices
-    #    store num: index in seen
+  
     pass
 
-print(two_sum(nums, target))
+# print(two_sum(nums, target))
 
 
 
