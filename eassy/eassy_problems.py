@@ -184,7 +184,7 @@ def remove_duplicates(nums):
 # PLAN:
 #   1. create slow = 0, fast = 1
 #   2. loop through nums
-#   3. 
+#   3. if nums[slow] == nums[fast] 
 #   4. 
 #   5.
 
