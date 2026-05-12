@@ -37,10 +37,10 @@
 
 
 
-nums1 = [1, 2, 2, 1]
-nums2 = [2, 2]
-# nums1 = [4, 9, 5]
-# nums2 = [9, 4, 9, 8, 4]
+# nums1 = [1, 2, 2, 1]
+# nums2 = [2, 2]
+nums1 = [4, 9, 5]
+nums2 = [9, 4, 9, 8, 4]
 
 def intersect(nums1, nums2):
     result = []
@@ -48,31 +48,10 @@ def intersect(nums1, nums2):
     
     for num in nums1:
         new_dict[num] = new_dict.get(num, 0) + 1
-
-        
-
-print(intersect(nums1, nums2))
-
-
-
-
-
-
-
-
-
-
-
-# INPUT: two list of integers nums1 and nums2 (unsorted arrays)  
-# OUTPUT: a list of both array intersection
-# OPERATION: count(primary) → compare → collect
-# PATTERN: dict (frecuecy > 0)
-# DS: dict
-# PLAN:
-#   1. create new_dict and create result_list
-#   2. loop through nums1 
-#       add numbers as keys and frecuency as values
-#   3. loop through nums2
-#       check if nums2 in new_dict, if yes subtract from dict and append to result_list
-#   4. return result_list with intersections
-
+    for n in nums2:
+        if n in new_dict and new_dict[n] > 0:
+            result.append(n)
+            new_dict[n] = new_dict.get(n, 0) - 1
+            
+    return result
+# print(intersect(nums1, nums2))
