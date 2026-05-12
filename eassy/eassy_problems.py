@@ -115,46 +115,12 @@ digits = [1, 2, 3]
 # digits = [9, 9, 9]
 
 def plus_one(digits):
-    # 1. loop backwards through digits
-    # 2. if digit != 9 → add 1, return
-    # 3. if digit == 9 → change to 0, keep looping
-    # 4. if loop ends → insert 1 at front
     pass
 
 print(plus_one(digits))
 
 
 ############################################################## PROBLEM 2 END ###############################################################
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 # 3. Remove Duplicates from Sorted Array #26 — Two Pointers
@@ -176,15 +142,26 @@ print(plus_one(digits))
 # Output: k=5, nums=[0,1,2,3,4,_,_,_,_,_]
 # ============================================
 
+# INPUT: sorted array of integers nums
+# OUTPUT: return k as number of unique elements (length of list)
+# OPERATION:look up(primary) → rearrange/remove → collect
+# PATTERN: list (look up for similar numbers) 
+# DS: list      
+# PLAN:
+#   1. create slow, fast
+#   2. loop through lens of nums
+#   3. if slow == fast
+#           slow stays put, fast goes up by 1, number get remove
+#   4. if slow != fast
+#           new number, slow goes to that position, fast goes up by one
+#   5. return the lens of list as k
+
+
 nums = [1, 1, 2]
 # nums = [0, 0, 1, 1, 1, 2, 2, 3, 3, 4]
 
 def remove_duplicates(nums):
-    # 1. slow = 0
-    # 2. loop fast through array
-    #    if nums[fast] != nums[slow]
-    #       slow += 1, copy fast to slow
-    # 3. return slow + 1
+
     pass
 
 print(remove_duplicates(nums))
@@ -213,12 +190,7 @@ nums = [0, 1, 0, 3, 12]
 # nums = [0]
 
 def move_zeroes(nums):
-    # 1. slow = 0
-    # 2. loop fast through array
-    #    if nums[fast] != 0
-    #       copy to slow, slow += 1
-    # 3. fill rest with zeros
-    # 4. return nums
+   
     pass
 
 print(move_zeroes(nums))
