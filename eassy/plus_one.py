@@ -25,8 +25,8 @@
 # INPUT: a large interget in an array of digits    
 # OUTPUT: same array modified   
 # OPERATION: compare(primary) → rearrange → collect
-# PATTERN: dict (modify existing list by adding 1 to the end)
-# DS: dict      
+# PATTERN: two pointers (modify existing list by adding 1 to the end)
+# DS: list      
 # PLAN:
 #   1. loop through digits:
 #   2. if digits[-1] != 9:
@@ -36,36 +36,18 @@
 #      digit.insert(0, 1)
 
 
-digits = [1, 2, 3]
-# digits = [1, 2, 9]
+# digits = [1, 2, 3]
+digits = [1, 2, 9]
 # digits = [9, 9, 9]
 
 def plus_one(digits):
-    for n in range(digits[-1], -1, -1):
+    for n in range(len(digits) - 1, -1, -1):
+        # print(n)
         if digits[n] != 9:
             digits[n] += 1
             return digits
-        print(n)
-   
+        else:
+            digits[n] = 0
+    digits.insert(0, 1)
 
 print(plus_one(digits))
-
-
-
-
-
-
-# INPUT: a large interger broken down in an array
-# OUTPUT: same array of large integer modified
-# OPERATION: find(primary) → look up → collect
-# PATTERN: list (look for last number to add 1) return modified list   
-# DS: list       
-# PLAN:
-#   1. loop through digits
-#   2. if last digits not equals 9
-            #add 1 to last digit and return list
-#   3. if last digit is iqual to 9
-#           change last digit to 0 and add 1 to next number
-#      if end of loop and not more digits insert 1 in position 0
-
-
