@@ -49,9 +49,3 @@ def remove_duplicates(nums):
     
 
 print(remove_duplicates(nums))
-
-
-#  if nums[slow] != nums[fast]:
-#             slow += 1
-#             nums[slow] = nums[fast]
-#             fast += 1
