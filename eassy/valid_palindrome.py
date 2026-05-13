@@ -32,7 +32,7 @@
 #   5.      left += 1; right -= 1
 #       else:
 #           return False
-#       return True
+#     return True
 
 
 
