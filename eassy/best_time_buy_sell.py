@@ -28,13 +28,12 @@
 # PLAN:
 #   1. create min_price = prices[0] and max_profit = 0, profit = 0
 #   2. loop through prices
-#   3.      if n+1 < min_price:
+#   3.      if price < min_price:
 #   4.          min_price = price
-#   5.          profit = min_price - price
-                # if profit > max_profit:
-                #     max_profit = profit
-        #     return max_profit
-        # return 0
+#   5.      profit = price - min_price
+         #  if profit > max_profit:
+         #    max_profit = profit
+        # return max_profit
 
 
 
@@ -48,16 +47,12 @@ prices = [7, 1, 5, 3, 6, 4]
 def max_profit(prices):
     min_price = prices[0]
     max_profit = 0
-    profit = 0
-    for price in range(len(prices)+ 1):
-        if min_price <= prices[price]:
-            print("inside if")
+    for price in prices:
+        if price < min_price:
             min_price = price
         profit = price - min_price
-        print(profit)
         if profit > max_profit:
             max_profit = profit
-        return 0
     return max_profit
 
 print(max_profit(prices))
