@@ -19,15 +19,15 @@
 # ============================================
 
 
-# INPUT:     
-# OUTPUT:    
-# OPERATION: ___(primary) → ___ → ___
-# PATTERN:   
-# DS:        
+# INPUT: a list of elements     
+# OUTPUT: a variable holding the number that repeats the most    
+# OPERATION: count(primary) → compare → return element
+# PATTERN: dict
+# DS: dict
 # PLAN:
-#   1. 
-#   2. 
-#   3. 
+#   1. create new_dict
+#   2. loop throgh nums
+#   3. nums[n] = nums.get(n, 0) + 1
 #   4. 
 #   5.
 
@@ -36,5 +36,10 @@ nums = [3, 2, 3]
 # nums = [2, 2, 1, 1, 1, 2, 2]
 
 def majority_element(nums):
-  
-    pass
+    new_dict = {}
+    for n in nums:
+        print(n)
+
+print(majority_element(nums))
+# d = {3:2, 2: 4}
+# print(max(d.values()))
