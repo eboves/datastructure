@@ -32,14 +32,16 @@
 #   5.
 
 
-nums = [3, 2, 3]
-# nums = [2, 2, 1, 1, 1, 2, 2]
+# nums = [3, 2, 3]
+nums = [2, 2, 1, 1, 1, 2, 2]
 
 def majority_element(nums):
     new_dict = {}
     for n in nums:
-        print(n)
+        new_dict[n] = new_dict.get(n, 0) + 1
+    for key, value in new_dict.items():
+        if value > len(nums)/2:
+            return key
+    
 
 print(majority_element(nums))
-# d = {3:2, 2: 4}
-# print(max(d.values()))
