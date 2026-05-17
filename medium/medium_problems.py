@@ -170,7 +170,14 @@ def min_sum_subarray(nums, k):
     min_sum = float('inf')
     current_sum = 0
     for i in range(k):
-        
+        current_sum += nums[i]
+    min_sum = current_sum
+    for i in range(k, len(nums)):
+        current_sum += nums[i]
+        current_sum -= nums[i - k]
+        min_sum = min(min_sum, current_sum)
+    return min_sum
+
 
 print(min_sum_subarray(nums, k))
 
