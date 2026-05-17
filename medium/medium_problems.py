@@ -95,7 +95,7 @@ def max_sum_subarray(nums, k):
 # PATTERN: sliding window
 # DS: slidind window
 # PLAN:
-#   1. create current_sum = 0, max_sum = 0, result = []
+#   1. create current_sum = 0, result = []
 #   2. loop from 0 to k:
 #   3.   max_sum = current_sum
 #   4.   result.append(max_sum/k)
@@ -110,17 +110,68 @@ k = 3
 
 def subarray_averages(nums, k):
     current_sum = 0.0
-    max_sum = 0.0
+    
     result = []
     for i in range(k):
         current_sum += nums[i]
-    max_sum = current_sum
     result.append(current_sum/k)
     for i in range(k, len(nums)):
         current_sum += nums[i]
         current_sum -= nums[i - k]
-        max_sum = max(max_sum, current_sum)
         result.append(current_sum/k)
     return result
 
-print(subarray_averages(nums, k))
+# print(subarray_averages(nums, k))
+
+
+# ============================================
+# Minimum Sum Subarray of Size K
+# Difficulty: Easy
+# Pattern: Sliding Window (Fixed Size)
+# ============================================
+#
+# Given an array of integers and a number k,
+# find the minimum sum of any contiguous
+# subarray of size k.
+#
+# Example:
+# Input:  nums = [3, 5, 2, 1, 6, 4, 8], k = 3
+# Output: 8  (from subarray [5, 2, 1])
+#
+# Explanation:
+# Window 1: [3, 5, 2] → sum = 10
+# Window 2: [5, 2, 1] → sum = 8  ← minimum
+# Window 3: [2, 1, 6] → sum = 9
+# Window 4: [1, 6, 4] → sum = 11
+# Window 5: [6, 4, 8] → sum = 18
+#
+# ============================================
+# INPUT: a list of nums and the window size k
+# OUTPUT: a number representing the min sum 
+# OPERATION: compare(primary) --> find --> return
+# PATTERN: fixed sliding window
+# DS: fixed sliding window
+# PLAN:
+#    create current_sum = 0, min_sum = float('inf')
+#    loop from 0 to ramge(k):
+#         current_sum += nums[i]
+#    min_sum = min(min_sum, current_sum)
+#    loop from k to len(nums)
+#         current_sum += nums[i]
+#         currnen_sum -= nums[i-k]
+#         min_sum = min(current_sum, min_sum)
+#   return min_sum
+#   
+
+nums = [3, 5, 2, 1, 6, 4, 8]
+k = 3
+
+def min_sum_subarray(nums, k):
+    min_sum = float('inf')
+    current_sum = 0
+    for i in range(k):
+        
+
+print(min_sum_subarray(nums, k))
+
+
