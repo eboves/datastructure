@@ -109,10 +109,18 @@ nums = [1, 3, 2, 6, 4, 8]
 k = 3
 
 def subarray_averages(nums, k):
-    current_sum = 0
-    max_sum = 0
+    current_sum = 0.0
+    max_sum = 0.0
     result = []
     for i in range(k):
-        
+        current_sum += nums[i]
+    max_sum = current_sum
+    result.append(current_sum/k)
+    for i in range(k, len(nums)):
+        current_sum += nums[i]
+        current_sum -= nums[i - k]
+        max_sum = max(max_sum, current_sum)
+        result.append(current_sum/k)
+    return result
 
 print(subarray_averages(nums, k))
