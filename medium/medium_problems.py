@@ -179,6 +179,49 @@ def min_sum_subarray(nums, k):
     return min_sum
 
 
-print(min_sum_subarray(nums, k))
+# print(min_sum_subarray(nums, k))
 
+"""
+============================================
+Smallest Subarray With Sum >= Target
+Difficulty: Easy/Medium boundary
+Pattern: Sliding Window (Variable Size)
+============================================
+
+Given an array of positive integers and a target sum,
+find the length of the smallest contiguous subarray
+whose sum is greater than or equal to the target.
+Return 0 if no such subarray exists.
+
+Example 1:
+Input:  nums = [2, 1, 5, 2, 3, 2], target = 7
+Output: 2  (subarray [5, 2])
+
+Example 2:
+Input:  nums = [2, 1, 5, 2, 8], target = 7
+Output: 1  (subarray [8])
+
+Example 3:
+Input:  nums = [3, 4, 1, 1, 6], target = 8
+Output: 3  (subarray [3, 4, 1] or [1, 1, 6])
+============================================
+
+INPUT:
+OUTPUT:
+OPERATION:
+PATTERN:
+DS:
+VALID WINDOW:
+INVALID WINDOW:
+PLAN:
+
+"""
+
+nums = [2, 1, 5, 2, 3, 2]
+target = 7
+
+def smallest_subarray(nums, target):
+    pass
+
+print(smallest_subarray(nums, target))
 
