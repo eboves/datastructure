@@ -214,14 +214,29 @@ DS:
 VALID WINDOW:
 INVALID WINDOW:
 PLAN:
-
+  create left=0, current_sum=0, min_length=float('inf')
+  loop right from 0 to len(nums):
+      add nums[right] to current_sum
+      while current_sum >= target:
+          update min_length = min(min_length, right - left + 1)
+          remove nums[left] from current_sum
+          left += 1
+  if min_length == float('inf'):
+      return 0
+  return min_length
 """
 
 nums = [2, 1, 5, 2, 3, 2]
 target = 7
 
 def smallest_subarray(nums, target):
-    pass
+    left = 0
+    current_sum = 0
+    min_length = float('inf')
+    for right in range(len(nums)):
+        current_sum += nums[right]
+        while current_sum >= target:
+            
 
 print(smallest_subarray(nums, target))
 
