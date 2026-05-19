@@ -246,5 +246,53 @@ def smallest_subarray(nums, target):
         return 0
     return min_length
 
-print(smallest_subarray(nums, target))
+# print(smallest_subarray(nums, target))
 
+"""
+============================================
+Longest Substring Without Repeating Characters
+Difficulty: Medium
+Pattern: Sliding Window (Variable Size)
+============================================
+
+Given a string, find the length of the longest
+substring without repeating characters.
+
+Example 1:
+Input:  s = "abcabcbb"
+Output: 3  (substring "abc")
+
+Example 2:
+Input:  s = "bbbbb"
+Output: 1  (substring "b")
+
+Example 3:
+Input:  s = "pwwkew"
+Output: 3  (substring "wke")
+
+============================================
+
+INPUT:
+OUTPUT:
+OPERATION:
+PATTERN:
+DS:
+VALID WINDOW:
+INVALID WINDOW:
+PLAN:
+
+
+
+
+
+"""
+
+
+s = "abcabcbb"
+# s = "bbbbb"
+# s = "pwwkew"
+
+def longest_substring(s):
+    pass
+
+print(longest_substring(s))
