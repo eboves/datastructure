@@ -206,13 +206,13 @@ Input:  nums = [3, 4, 1, 1, 6], target = 8
 Output: 3  (subarray [3, 4, 1] or [1, 1, 6])
 ============================================
 
-INPUT:
-OUTPUT:
-OPERATION:
-PATTERN:
-DS:
-VALID WINDOW:
-INVALID WINDOW:
+INPUT: a list of numbers and a target
+OUTPUT: the length of the smallest subarray
+OPERATION: compare (primary) --> find --> return
+PATTERN: variable sliding window
+DS: variable sliding window
+VALID WINDOW: if there is a subarray that sum is equal or greater than the target.
+INVALID WINDOW: if none of the subarrays add up to the targer or larger
 PLAN:
   create left=0, current_sum=0, min_length=float('inf')
   loop right from 0 to len(nums):
@@ -226,8 +226,11 @@ PLAN:
   return min_length
 """
 
-nums = [2, 1, 5, 2, 3, 2]
-target = 7
+# nums = [2, 1, 5, 2, 3, 2]
+# nums = [2, 1, 5, 2, 8]
+# target = 7
+nums = [3, 4, 1, 1, 6] 
+target = 8
 
 def smallest_subarray(nums, target):
     left = 0
@@ -236,7 +239,12 @@ def smallest_subarray(nums, target):
     for right in range(len(nums)):
         current_sum += nums[right]
         while current_sum >= target:
-            
+            min_length = min(min_length, right - left + 1)
+            current_sum -= nums[left]
+            left += 1
+    if min_length == float('inf'):
+        return 0
+    return min_length
 
 print(smallest_subarray(nums, target))
 
