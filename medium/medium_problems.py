@@ -272,13 +272,13 @@ Output: 3  (substring "wke")
 
 ============================================
 
-INPUT:
-OUTPUT:
-OPERATION:
-PATTERN:
-DS:
-VALID WINDOW:
-INVALID WINDOW:
+INPUT: a string of chars
+OUTPUT: the length of the longest subarray without repeating.
+OPERATION: Look up (primary) --> compare --> find -- > return #loop up first because i need to know if the char is in the set first then comes compare to evaluate the condition and finally Find to track the longest subarray.
+PATTERN: variable sliding windows
+DS: set
+VALID WINDOW: is valid if not repeating char in the window
+INVALID WINDOW: if there is a repeating char in the window
 PLAN:
 
 
