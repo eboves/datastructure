@@ -280,7 +280,16 @@ DS: set
 VALID WINDOW: is valid if not repeating char in the window
 INVALID WINDOW: if there is a repeating char in the window
 PLAN:
-
+create: left = 0, longest = 0, seen = ()
+for right in range(len(s)):
+    if s[right] not in seen:
+        seen.add(s[right])
+    else:
+        seen.remove(s[left])
+        left += 1
+    
+    longest = max(longest, len(seen))
+return longest
 
 
 
@@ -291,8 +300,37 @@ PLAN:
 s = "abcabcbb"
 # s = "bbbbb"
 # s = "pwwkew"
+# s = "abba"
+######################################################################## MY WAY ###############################################
+# def longest_substring(s):
+#     left = 0
+#     longest = 0
+#     seen = set()
+
+#     for right in range(len(s)):
+#         if s[right] not in seen:
+#             seen.add(s[right])
+#         else:
+#             seen.remove(s[left])
+#             seen.add(s[right])  
+#             left += 1
+#         longest = max(longest, len(seen))
+#     return longest
+# print(longest_substring(s))
+
+######################################################################## MY WAY ###############################################
+
 
 def longest_substring(s):
-    pass
+    left = 0
+    longest = 0
+    seen = set()
 
+    for right in range(len(s)):
+        while s[right] in seen:
+            seen.remove(s[left])  
+            left += 1
+        seen.add(s[right])
+        longest = max(longest, len(seen))
+    return longest
 print(longest_substring(s))
